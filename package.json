@@ -1,0 +1,32 @@
+{
+  "name": "commander-config",
+  "version": "0.0.0",
+  "description": "Recursively walks up directories from the current directory to look for settings files to provide defaults for commander.js",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "mocha",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ForbesLindesay/commander-config.git"
+  },
+  "keywords": [
+    "commander",
+    "yaml",
+    "recursive",
+    "walk",
+    "json",
+    "settings"
+  ],
+  "author": "Forbes Lindesay",
+  "license": "BSD",
+  "devDependencies": {
+    "should": "*",
+    "mocha": "*"
+  },
+  "dependencies": {
+    "q": "0.8.x",
+    "js-yaml": "1.x.x"
+  }
+}
