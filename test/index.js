@@ -23,7 +23,7 @@ describe('look up settings', function () {
 });
 
 describe('commander `withSettings`', function () {
-  describe('calling the result with a few arguments', function () {
+  describe('calling the result with env in first argument', function () {
     it('works as expected', function (done) {
       lib.withSettings('./settings', function (env, command) {
         command.should.equal('command');
@@ -34,5 +34,17 @@ describe('commander `withSettings`', function () {
         done();
       })({a: 'hello'}, 'command');
     });
-  })
+  });
+  describe('calling the result with env in second argument', function () {
+    it('works as expected', function (done) {
+      lib.withSettings('./settings', function (command, env) {
+        command.should.equal('command');
+        env.a.should.equal('hello');
+        env.b.should.equal('forbes');
+        env.c.should.equal('foo');
+        env.d.should.equal('bar');
+        done();
+      })('command', {a: 'hello'});
+    });
+  });
 });

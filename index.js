@@ -83,8 +83,18 @@ function withSettings(relativePath, cb) {
         var args = arguments;
         var self = this;
         lookUpSettings(relativePath).then(function (settings) {
-            merge(args[0]).into(settings);
-            args[0] = settings;
+            var merged = false;
+            for (var i = 0; i < args.length; i++) {
+                if (typeof args[i] === 'object') {
+                    if (merged) throw new Error('You can\'t merge settings into two arguments');
+                    merge(args[i]).into(settings);
+                    args[i] = settings;
+                    merged = true;
+                }
+            }
+            if (!merged) {
+                console.warn('Commander config was unable to merge settings.');
+            }
             cb.apply(self, args);
         }).end();
     };
