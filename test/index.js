@@ -17,7 +17,7 @@ describe('look up settings', function () {
           settings.d.should.equal('bar');
           done();
         }, done)
-        .end();
+        .done();
     });
   });
 });
