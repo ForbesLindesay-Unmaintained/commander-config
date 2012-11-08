@@ -96,6 +96,6 @@ function withSettings(relativePath, cb) {
                 console.warn('Commander config was unable to merge settings.');
             }
             cb.apply(self, args);
-        }).end();
+        }).done();
     };
 }
