@@ -1,6 +1,6 @@
 {
   "name": "commander-config",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Recursively walks up directories from the current directory to look for settings files to provide defaults for commander.js",
   "main": "index.js",
   "scripts": {
