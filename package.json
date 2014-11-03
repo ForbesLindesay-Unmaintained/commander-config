@@ -27,6 +27,6 @@
   },
   "dependencies": {
     "q": "~1.0.0",
-    "js-yaml": "1.x.x"
+    "js-yaml": "3.x.x"
   }
 }
