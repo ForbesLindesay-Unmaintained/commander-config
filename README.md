@@ -2,6 +2,8 @@
 commander-config
 ================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ForbesLindesay/commander-config.svg)](https://greenkeeper.io/)
+
 Recursively walks up directories from the current directory to look for settings files to provide defaults for commander.js
 
 If you run your app in `/foo/bar/baz/` and use the relative path `.boz` then commander-config would try:
